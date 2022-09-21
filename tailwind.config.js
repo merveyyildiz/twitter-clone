@@ -8,14 +8,14 @@ module.exports = {
       colors: {
         primary: {
           base: "#1DA1F2",
-          dark: "#1DA1E1 ",
-          light: "#1DA1F7"
+          dark: "#0e9af1",
+          light: "#cfebfc"
         },
         gray: {
           dark: "#657786",
           light: "#AABBC2",
           extraLight: "#E1E8ED",
-          lightest: "#FSF8FA"
+          lightest: "#FSF8FA",
         },
         black: "#14141A"
       }
