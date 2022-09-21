@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   TwitterIcon,
   BookmaksIcon,
@@ -21,6 +21,7 @@ import {
   ShareIcon,
 } from "../assets/icons/icon";
 import SideLink from "../components/SideLink";
+import UserBox from "../components/UserBox";
 
 const sideLinks = [
   {
@@ -58,6 +59,11 @@ const sideLinks = [
 ];
 
 const Sidebar = () => {
+  const [active, setActive] = useState("Home");
+
+  const handleMenuItemClick = (activeItem) => {
+    setActive(activeItem);
+  }
   return (
     <div className="w-72 flex flex-col justify-between px-2">
       <div>
@@ -68,14 +74,15 @@ const Sidebar = () => {
         <nav className="mb-4">
           <ul>
             {sideLinks.map(({ name, icon}) => (
-                <SideLink key={name} name={name} Icon={icon}/>
+                <SideLink key={name} name={name} Icon={icon} active={active} onMenuItemClick={handleMenuItemClick}/>
             ))}
           </ul>
         </nav>
 
         <button className="bg-primary-base text-wthite rounded-full py-3 px-8 w-11/12 shadow-lg hover:bg-primary-dark transform transition-colors duration-200">Tweet</button>
       </div>
-      <div>alt</div>
+      
+      <UserBox />
     </div>
   );
 };
