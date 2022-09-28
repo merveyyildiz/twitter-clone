@@ -4,13 +4,13 @@ const SideLink = ({name, Icon, active, onMenuItemClick}) => {
     const isActive = active === name;
     return(
         <li className="group" onClick={() => onMenuItemClick(name)}>
-            <a href={name.toLowerCase()} className="cursor-pointer block text-xl mb-2 pointer-events-none">
-                <div className="inline-block">
-                    <div className={`flex items-center group-hover:bg-primary-light rounded-full pl-3 pr-8 py-3 group-hover:text-primary-base
+            <a href={name.toLowerCase()} className="cursor-pointer flex justify-center 2xl:block text-xl mb-1 2xl:mb-5 pointer-events-none">
+                <div className="flex justify-center 2xl:justify-start">
+                    <div className={`flex items-center group-hover:bg-primary-light rounded-full p-2 2xl:pl-3 2xl:pr-8 2xl:py-2 group-hover:text-primary-base
                     ${isActive ? "text-primary-base": ""}
                     `}>
-                        <Icon />
-                        <span className="ml-4 font-bold hidden md:block">{name}</span>
+                        <Icon className="w-7 h-7"/>
+                        <span className="ml-4 font-bold hidden 2xl:block">{name}</span>
                     </div>
                 </div>
           

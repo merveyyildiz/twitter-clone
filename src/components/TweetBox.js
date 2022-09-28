@@ -35,7 +35,7 @@ const TweetBox = () => {
         onChange={(e) => setContent(e.target.value)}
         value={content}
       />
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col  sm:flex-row items-center justify-between sm:item-center sm:justify-between">
         <div className="flex -ml-3">
           <div className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-lightest">
             <ImageIcon className="w-5 h-5 text-primary-base" />

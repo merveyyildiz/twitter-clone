@@ -15,8 +15,8 @@ const FeedItem = ({ avatar, content, displayName, timestamp, username }) => {
           </span>
         </div>
         <p className="mt-2 text-gray-900 text-sm">{content}</p>
-        <ul className="flex justify-between max-w-md -ml-1 mt-3">
-            <li className="group flex items-center space-x-3 text-gray-dark text-sm">
+        <ul className="flex justify-between max-w-md md:-ml-1 mt-3">
+            <li className="group flex items-center space-x-1 md:space-x-3 text-gray-dark text-sm">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full group-hover:bg-primary-light">
                     <ReplyIcon className="w-5 h-5 hover:text-primary-base" />
                 </div>
