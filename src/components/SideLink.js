@@ -10,7 +10,7 @@ const SideLink = ({name, Icon, active, onMenuItemClick}) => {
                     ${isActive ? "text-primary-base": ""}
                     `}>
                         <Icon />
-                        <span className="ml-4 font-bold">{name}</span>
+                        <span className="ml-4 font-bold hidden md:block">{name}</span>
                     </div>
                 </div>
           

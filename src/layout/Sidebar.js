@@ -2,23 +2,13 @@ import React, { useState } from "react";
 import {
   TwitterIcon,
   BookmaksIcon,
-  EmojiIcon,
   ExploreIcon,
-  GIFIcon,
   HomeIcon,
-  ImageIcon,
-  LikeIcon,
   ListsIcon,
   MessagesIcon,
   MoreIcon,
   NotificationIcon,
-  PollIcon,
   ProfileIcon,
-  ReplyIcon,
-  ReTweetIcon,
-  ScheduleIcon,
-  SearchIcon,
-  ShareIcon,
 } from "../assets/icons/icon";
 import SideLink from "../components/SideLink";
 import UserBox from "../components/UserBox";
@@ -65,7 +55,7 @@ const Sidebar = () => {
     setActive(activeItem);
   }
   return (
-    <div className="w-72 flex flex-col justify-between px-2">
+    <div className="h-screen w-72 sticky top-0 flex flex-col justify-between px-2">
       <div>
         <div className="mt-1 mb-4 ml-1 flex w-12 h-12 justify-center items-center rounded-full hover:bg-gray-extraLight transform transition-colors duration-200">
           <TwitterIcon />
