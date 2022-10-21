@@ -6,8 +6,9 @@ import db from "../firebase";
 //import { doc, onSnapshot } from "firebase/firestore";
 import { collection, getDocs } from "firebase/firestore";
 import FeedList from "../components/FeedList";
+import UserBox from "../components/UserBox";
 
-const Content = () => {
+const Content = ({handleClick}) => {
   const [tweets, setTweets] = useState([]);
 
   useEffect(()=> {
@@ -22,11 +23,19 @@ const Content = () => {
     getTweet();
     
   }, []);
-  console.log("tweet",tweets);
+  
   return (
-    <main className="flex-1 flex flex-col border-r border-l border-gray-extraLight">
-      <header className="sticky top-0 z-10 flex justify-between items-center p-4 border-b border-gray-extraLight bg-white">
-        <span className="font-bold text-xl text-gray-900">Home</span>
+    <main className="flex-1 flex flex-col border-r border-l border-gray-extraLight z-1">
+      <header className="sticky top-0 flex justify-between items-center p-4 border-b border-gray-extraLight bg-white z-1">
+        <div className="font-bold text-xl text-gray-900 flex justify-start items-center flex-column">
+          <a className="inline-block md:hidden" onClick={handleClick}>
+          <img
+            className="w-10 h-10 sm:w-11 rounded-full mr-2"
+            src="https://pbs.twimg.com/profile_images/1546902964597661696/IxY9Fslh_400x400.jpg"
+            alt="profile"/>
+          </a>
+          <span>Home</span>
+        </div>
         <PopularIcon className="w-6 h-6 text-primary-base" />
       </header>
       <div className="flex space-x-4 px-4 py-3">
@@ -40,7 +49,7 @@ const Content = () => {
       <Divider />
 
       {/* Feed */}
-      <FeedList tweets={tweets} />
+      <FeedList tweets={tweets} className="hidden md:block" />
     </main>
   );
 };

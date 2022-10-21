@@ -8,6 +8,7 @@ import {
   NotificationIcon,
   ProfileIcon,
   TweetIcon,
+  CloseIcon,
 } from "../assets/icons/icon";
 import SideLink from "../components/SideLink";
 import UserBox from "../components/UserBox";
@@ -40,19 +41,23 @@ const sideLinks = [
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ className, handleClick }) => {
   const [active, setActive] = useState("Home");
 
   const handleMenuItemClick = (activeItem) => {
     setActive(activeItem);
   }
   return (
-    <div className="h-screen w-44 2xl:w-72 sticky top-0 flex flex-col items-end 2xl:items-start pr-5 justify-between px-2">
+    <div className={`${className} h-screen w-52 2xl:w-72 left-0  md:sticky lg:sticky bg-white top-0 md:flex flex-col items-end 2xl:items-start pr-5 justify-between px-2 z-10`}>
       <div>
-        <div className="mt-1 mb-4  2xl:ml-1 flex w-full h-12  2xl:w-12 justify-center items-center rounded-full hover:bg-gray-extraLight transform transition-colors duration-200">
+        <div className="mt-2 mb:1 md:mb-4  2xl:ml-1 flex w-full h-8 md:h-12  2xl:w-12 justify-center items-center rounded-full hover:bg-gray-extraLight transform transition-colors duration-200">
           <TwitterIcon />
         </div>
-       
+
+        <a onClick={handleClick} >
+          <CloseIcon className={"absolute md:hidden right-1 w-7 h-7 top-1"} />
+        </a>
+
         <nav className="mb-4">
           <ul>
             {sideLinks.map(({ name, icon}) => (
