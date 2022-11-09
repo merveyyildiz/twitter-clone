@@ -35,25 +35,25 @@ const TweetBox = () => {
         onChange={(e) => setContent(e.target.value)}
         value={content}
       />
-      <div className="flex flex-col  sm:flex-row items-center justify-between sm:item-center sm:justify-between">
+      <div className="flex flex-row items-center justify-between sm:item-center sm:justify-between">
         <div className="flex -ml-3">
-          <div className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-lightest">
+          <div className="flex items-center justify-center  w-7 h-7 lg:w-9 lg:h-9 rounded-full hover:bg-gray-lightest">
             <ImageIcon className="w-5 h-5 text-primary-base" />
           </div>
-          <div className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-lightest">
+          <div className="flex items-center justify-center  w-7 h-7 lg:w-9 lg:h-9 rounded-full hover:bg-gray-lightest">
             <GIFIcon className="w-5 h-5 text-primary-base" />
           </div>
-          <div className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-lightest">
+          <div className="flex items-center justify-center  w-7 h-7 lg:w-9 lg:h-9 rounded-full hover:bg-gray-lightest">
             <PollIcon className="w-5 h-5 text-primary-base" />
           </div>
-          <div className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-lightest">
+          <div className="flex items-center justify-center  w-7 h-7 lg:w-9 lg:h-9 rounded-full hover:bg-gray-lightest">
             <EmojiIcon className="w-5 h-5 text-primary-base" />
           </div>
-          <div className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-lightest">
+          <div className="flex items-center justify-center w-7 h-7 lg:w-9 lg:h-9 rounded-full hover:bg-gray-lightest">
             <ScheduleIcon className="w-5 h-5 text-primary-base" />
           </div>
         </div>
-        <button className="bg-primary-base text-white rounded-full px-4 py-2 font-medium"
+        <button className="bg-primary-base text-white rounded-full px-2 py-1 font-medium lg:px-4 lg:py-2"
         onClick={sendTweet}
         >
           Tweet

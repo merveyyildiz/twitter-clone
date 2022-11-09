@@ -6,7 +6,6 @@ import db from "../firebase";
 //import { doc, onSnapshot } from "firebase/firestore";
 import { collection, getDocs } from "firebase/firestore";
 import FeedList from "../components/FeedList";
-import UserBox from "../components/UserBox";
 
 const Content = ({handleClick}) => {
   const [tweets, setTweets] = useState([]);

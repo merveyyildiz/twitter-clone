@@ -8,7 +8,7 @@ const UserBox = () => {
         src="https://pbs.twimg.com/profile_images/1546902964597661696/IxY9Fslh_400x400.jpg"
         alt="profile"
       ></img>
-      <div className="flex flex-col">
+      <div className="flex flex-col ml-1 md:ml-0">
         <span className="font-bold text-sm md:text-md text-black">Merve yıldız</span>
         <span className="text-sm text-gray-dark">@merveyyildiz</span>
       </div>
